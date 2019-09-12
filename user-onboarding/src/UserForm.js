@@ -14,6 +14,8 @@ const UserForm = ({ errors, touched, status }) => {
 
     return (
         <Form>
+            <label className='title'>New User</label>
+
             {touched.name && errors.name && <p className='error'>{errors.name}</p>}
             <Field type='text' name='name' placeholder='Name' /> <br />
 
