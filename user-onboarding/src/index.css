@@ -22,9 +22,9 @@ form {
   justify-content: center;
   align-content: center;
   width: 45%;
-  height: 400px;
-  margin: 8% auto;
-  padding: 0 120px;
+  height: auto;
+  margin: 10% auto;
+  padding: 30px 120px;
   background-color: white;
   border-radius: 8px;
 }
