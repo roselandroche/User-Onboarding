@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { withFormik, Form, Field } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios';
 
 const UserForm = ({ errors, touched, status }) => {
+    const [users, setUsers] = useState([])
+
+    useEffect(() => {
+        if(status) {
+            setUsers(...users, status)
+        }
+    }, [status])
+
     return (
         <Form>
             {touched.name && errors.name && <p className='error'>{errors.name}</p>}
@@ -20,7 +28,15 @@ const UserForm = ({ errors, touched, status }) => {
                 <Field type='checkbox' name='tos' />
                 <span>Terms of Service</span>
             </label> <br />
+
             <button type='submit'>Submit</button>
+
+            {users.map((user) => (
+                <div>
+                    <p>User: {user.name}</p>
+                    <p>Email: {user.email}</p>
+                </div>
+            ))}
         </Form>
     )
 }
