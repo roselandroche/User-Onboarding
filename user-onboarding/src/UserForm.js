@@ -8,7 +8,7 @@ const UserForm = ({ errors, touched, status }) => {
 
     useEffect(() => {
         if(status) {
-            setUsers(...users, status)
+            setUsers([...users, status])
         }
     }, [status])
 
