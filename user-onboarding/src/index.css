@@ -29,6 +29,32 @@ form {
   border-radius: 8px;
 }
 
+form input{
+  height: 30px;
+  font-size: 18px;
+  border-radius: 12px;
+  padding-left: 15px;
+}
+
+form label{
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+form button{
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 16px;
+}
+button:hover {
+    background-color: purple;
+    color: white;
+}
+
 .title {
   padding: 0 20px 60px 20px;
   font-size: 25px;
